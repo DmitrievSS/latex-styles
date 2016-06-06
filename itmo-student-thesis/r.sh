@@ -1,10 +1,8 @@
 #!/bin/bash
 
-for i in bachelor master; do
-	pdflatex $i-thesis
-	biber 	 $i-thesis
-	pdflatex $i-thesis
-	pdflatex $i-thesis
-done
+pdflatex master-thesis
+biber    master-thesis
+pdflatex master-thesis
+pdflatex master-thesis
 
-rm {bachelor,master}-thesis.{bib,aux,log,bbl,bcf,blg,run.xml,toc,tct}
+rm master-thesis.{bib,aux,log,bbl,bcf,blg,run.xml,toc,tct}
